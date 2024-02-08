@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div style="display: flex; justify-content: center; padding: 0.5rem;">
+      <div style="width: 100%; display: flex; justify-content: start; align-items: center; padding: 0.5rem;">
+        <a (click)="volverAlHome()">
+          <img src="../../../assets/go_back_128px.png" alt="" width="40px">
+        </a>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="auth.listaTop5ParaMostrar">
+    <ion-list-header style="margin: 2rem 0;">
+      <ion-label style="font-size: 20px;color:white; text-decoration: underline; text-align: center;">Los mejores 5 registros (Nivel {{shared.nivel}})</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let jugador of this.auth.listaTop5ParaMostrar;let i = index" >
+      <ion-label style="color: white;">{{i+1}}</ion-label>
+      <ion-label style="color: white;">{{jugador.nombre}}</ion-label>
+      <ion-label style="color: white;">{{jugador.seg}}</ion-label>
+      <ion-label style="color: white;">{{jugador.fecha}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

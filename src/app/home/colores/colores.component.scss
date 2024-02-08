@@ -1,0 +1,51 @@
+ion-toolbar{
+    --ion-background-color:#a2bae4;
+  }
+  
+  ion-content{ 
+    --ion-background-color:linear-gradient(336deg,rgb(80, 99, 151),rgb(194, 180, 153));
+  }
+
+  .banderaSeleccionada{
+    box-shadow: 2px 2px 20px 5px #fff;
+    border-radius: 50%;
+  }
+  .banderaNoSeleccionada{
+    box-shadow: none;
+    border-radius: 50%;
+  }
+ 
+  
+  .rotarCartas{
+    height: 20vh;
+    width: 50%;  
+    animation-name: example;
+    animation-duration: 1s;
+    z-index: 999;
+    animation-iteration-count: 1;
+    
+  }
+
+  .noRotarCartas{
+    height: 20vh;
+    width: 50%;
+    transform: rotateY(0deg);
+    animation-name: example2;
+    animation-duration: 1s;
+  }
+  
+  @keyframes example {
+    
+    0%   {background-color: rgba(0, 255, 115, 0.671) !important;transform:rotateY(150deg)}
+    25%  {background-color: rgba(0, 255, 115, 0.671) !important;transform:rotateY(0deg)}
+    // 50%  {transform:rotateY(150deg)}
+    // 75%  {transform:rotateY(0deg)}
+    // 100% {transform:rotateY(150deg)}
+  }
+  @keyframes example2 {
+    0%   {transform:rotateY(150deg)}
+    25%  {transform:rotateY(0deg)}
+    // 50%  {transform:rotateY(150deg)}
+    // 75%  {transform:rotateY(0deg)}
+    // 100% {transform:rotateY(150deg)}
+  }

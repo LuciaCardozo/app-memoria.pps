@@ -1,0 +1,16 @@
+ion-toolbar{
+    --ion-background-color:#a2bae4;
+  }
+  
+  ion-content{ 
+    --ion-background-color:linear-gradient(336deg,rgb(80, 99, 151),rgb(194, 180, 153));
+  }
+
+  .banderaSeleccionada{
+    box-shadow: 2px 2px 20px 5px #fff;
+    border-radius: 50%;
+  }
+  .banderaNoSeleccionada{
+    box-shadow: none;
+    border-radius: 50%;
+  }

@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div style="display: flex; justify-content: center; padding: 0.5rem;">
+      <div style="width: 100%; display: flex; justify-content: start; align-items: center; padding: 0.5rem;">
+        <a (click)="volverAlHome()">
+          <img src="../../../assets/go_back_128px.png" alt="" width="40px">
+        </a>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="display: flex; justify-content: center">
+    <div style="font-size: 24px; color: white; font-family: monospace; padding: 4px 4px; background-color: rgb(80, 99, 151); width: 60%; text-align: center; border-radius: 20px; margin: 0.5rem 0;"> 
+      {{timer}} 
+    </div>
+  </div>
+  <div style="display: grid; justify-content: unset; align-items: center;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill,minmax(8rem,1fr)); grid-auto-rows: 11rem; align-items: center;" >
+      <a *ngFor="let opcion of this.listaRandom; let i = index" style="display: flex; justify-content: center; ">
+        <ion-chip (click)="seSeleccionoColor(opcion)" style="height: 20vh; width: 50%; background-color: #a2bae4; opacity: 1 !important;" 
+        [ngClass]="opcion.flipped ? 'rotarCartas' : 'noRotarCartas'" [disabled]='opcion.flipped'>
+          <img [src]="opcion.flipped ? opcion.src : '../../../assets/juego/signoDeInterrogacion.svg'" alt="" width="200px"> 
+        </ion-chip>
+      </a>
+    </div>
+  </div>
+  <div *ngIf="modalFinalizado" style="position: absolute; top: 0; left: 0; z-index: 9999; background-color: rgba(0, 128, 128, 0.582); width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+    <div style="background-color: #9797e6; padding: 10px; border-radius: 10px;">
+      <h1 style="text-align: center;">¡ Ganaste !</h1>
+      <h5 style="text-align: center;">Con un tiempo de <b>{{timer}}</b> segundos.</h5>
+      <div style="display: flex; justify-content: space-around;">
+        <button style="margin-top: 1.5rem; padding: 10px 20px; border: none; border-radius: 20px; font-weight: bold; background-color: #7aec7a;"
+        (click)="volverAlHome()">Volver al inicio.</button>
+      </div>
+    </div>
+  </div> 
+</ion-content>

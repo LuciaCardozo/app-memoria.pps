@@ -1,0 +1,37 @@
+#iconAnimado{
+    position: absolute; 
+   // top: 10rem;
+    animation-name: atrapando;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    //visibility: hidden;
+}
+
+@keyframes atrapando {
+    0%   {rotate: 0deg; bottom: -25%;}
+    25% {rotate: 360deg;bottom: 25%;}
+    50%  {rotate: 0deg;bottom: 50%;}
+    75%  {rotate: -360deg;bottom: 75%;}
+    100% {rotate: 0deg;bottom: 100%;}  
+    // 75%  {rotate: -360deg;bottom: 25%;}  
+    // 50%  {rotate: 0deg;bottom: 50%;}
+    // 25% {rotate: 360deg;bottom: 75%;}
+    // 0%   {rotate: 0deg; bottom: 0%;}
+}
+
+#titleAnimado{
+    position: absolute; 
+    animation-name: movimiento;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    z-index: 9999;
+    text-shadow: -5px 5px 10px;
+}
+
+@keyframes movimiento {
+    0%   {bottom: -25%;}
+    25% {bottom: 25%;}
+    50%  {bottom: 50%;}
+    75%  {bottom: 75%;}
+    100% {bottom: 100%;}  
+}

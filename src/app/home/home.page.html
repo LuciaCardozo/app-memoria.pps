@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div style="display: flex; justify-content: center; padding: 0.5rem;">
+      <div style="width: 100%; display: flex; justify-content: start; align-items: center; padding: 0.5rem;">
+        <a routerLink="/login">
+          <img src="../../assets/off.png" alt="" width="35px">
+        </a>
+      </div>
+      <ion-fab  vertical="top" horizontal="end" style="position: absolute; top: 8px;">
+        <ion-fab-button style="--background:transparent; font-size: 10px;">
+          Puntuación 
+        </ion-fab-button>
+        <ion-fab-list side="start">
+          <ion-fab-button (click)="IrATop5('Difícil')">
+            Difícil
+          </ion-fab-button>
+          <ion-fab-button (click)="IrATop5('Medio')">
+            Medio
+          </ion-fab-button>
+          <ion-fab-button (click)="IrATop5('Fácil')"> 
+            Fácil
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+      <!-- <div style="width: 50%; display: flex; justify-content: end; align-items: center; padding: 0.5rem;">
+        <a style="color: white; background-color: rgb(80, 99, 151); padding: 10px; border-radius: 20px; font-weight: bold; text-decoration: underline; box-shadow: 0px 0px 10px;">
+          Top 5
+        </a>
+      </div> -->
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <div style="display: grid; justify-content: center; align-items: center; margin-top: 1rem;">
+   <a (click)="clickEnImg('colores')" style="display: grid; text-align: center; justify-content: center; color: black; font-size: 24px; font-family: monospace; text-shadow: -2px -2px 4px blue; background-color: #a2bae4; border-radius: 20px; padding: 5px;">
+     <img src="../../assets/animales/caballo-02.svg" alt="" width="130px">
+     Fácil
+   </a>
+   <a (click)="clickEnImg('numeros')" style="display: grid; text-align: center; justify-content: center; color: black; font-size: 24px; font-family: monospace; text-shadow: -2px -2px 4px blue; margin-top: 1rem; background-color: #a2bae4; border-radius: 20px; padding: 5px;">
+    <img src="../../assets/herramientas/cerrucho-02.svg" alt="" width="130px">
+    Medio
+  </a>
+  <a (click)="clickEnImg('animales')" style="display: grid; text-align: center; justify-content: center; color: black; font-size: 24px; font-family: monospace; text-shadow: -2px -2px 4px blue; margin-top: 1rem; background-color: #a2bae4; border-radius: 20px; padding: 5px;">
+    <img src="../../assets/frutas/anana-02.svg" alt="" width="90px">
+    Difícil
+  </a>
+ </div>
+</ion-content>
